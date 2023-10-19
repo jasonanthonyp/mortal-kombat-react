@@ -1,13 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom"
+// import About from './about'
+import App from './App'
+import Welcome from './Welcome'
+import About from './About'
+import KombatPage from './KombatPage'
+
+//React Router config
+const myRouter = createBrowserRouter([{
+  path: "/",
+  element: <App />,
+  children: [
+    {
+      path: "/",
+      element: <Welcome />
+    },
+    {
+      path: "/kombatpage",
+      element: <KombatPage />,
+      loader: async () => fetch("http://localhost:3000/karacters").then((r) => r.json())
+    },
+    {
+      path: "/about",
+      element: <About />,
+    }
+
+  ]
+}]);
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={myRouter}/>
   </React.StrictMode>
 );
 

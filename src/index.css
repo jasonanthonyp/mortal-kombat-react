@@ -11,3 +11,111 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ .cards {
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: cover;
+  justify-content: center;
+  background-color: #360a0a;
+}
+
+ .cards img {
+  width: 100%;
+  height: 100%;
+ }
+
+.karacterkard {
+  border: solid black 2px;
+  box-shadow: 3px 5px #222A;
+  width: 300px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+} 
+
+.karacterkard img {
+  object-fit: fill;
+}
+
+
+.welcome {
+  background-image: url("https://assets-prd.ignimgs.com/2022/08/10/mortal-kombat-snow-blind-1-1660172155660.jpg"); 
+  background-position: center;
+  display: flex;
+  flex-direction: "column";
+  align-Items: "center";
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-heading {
+  font-family: "MK Title";
+  text-align: center;
+  font-size: 110px;
+  transition: font-size 0.3s;
+  color: rgb(161, 4, 4)
+}
+
+.centered-heading:hover {
+  font-size: 150px;
+}
+
+
+
+nav {
+    font-family: "MK Title";
+    background-color: #150808;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: rgb(161, 4, 4)
+}
+
+nav a {
+  text-decoration: none;
+  color: white; 
+}
+
+nav a:hover,
+nav a.active {
+    color: rgb(161, 4, 4);
+    text-decoration: line-through
+}
+
+.karacterkard {
+  width: 200px;
+  height: 300px;
+}
+
+.backkard {
+  color: rgb(161, 4, 4);
+  font-family: "MK Title";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+
+.kombatpage {
+  background-image: url("https://assets-prd.ignimgs.com/2022/08/10/mortal-kombat-snow-blind-1-1660172155660.jpg"); 
+  background-position: center;
+  display: flex;
+  
+}
+
+.about {
+  color:rgb(239, 221, 221);
+  text-align: center;
+  align-items: center;
+  line-height: 3em;
+  padding: 10px;
+  font-family: "MK Title";
+  display: flex;
+  background-image: url("https://assets-prd.ignimgs.com/2022/08/10/mortal-kombat-snow-blind-1-1660172155660.jpg"); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
